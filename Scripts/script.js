@@ -5,6 +5,9 @@ const textInput = document.getElementById("message");
 const submitButton = document.getElementById("submit");
 const response = document.getElementById("formResponse");
 
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
 submitButton.addEventListener("click", function (e) {
   const name = nameInput.value;
   const email = emailInput.value;
@@ -24,4 +27,8 @@ submitButton.addEventListener("click", function (e) {
   } else {
     response.innerText = "Fill all required fields";
   }
+});
+
+navToggle.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
 });
